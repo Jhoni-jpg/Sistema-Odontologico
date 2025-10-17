@@ -31,12 +31,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Configuración local
-.env
-.env.local
-.env.*.local
-*.env
-
 # PostgreSQL (archivos comunes de dump o backups)
 *.sql
 *.pgsql
