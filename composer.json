@@ -1,0 +1,17 @@
+{
+    "name": "acernitro5/sistema_gestion-citas",
+    "autoload": {
+        "psr-4": {
+            "Acernitro5\\SistemaGestionCitas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jhonier Duran",
+            "email": "djhoniersamir@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

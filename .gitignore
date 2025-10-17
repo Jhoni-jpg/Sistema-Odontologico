@@ -1,0 +1,61 @@
+# PHP
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.swo
+*.sass-cache/
+*.php~
+*.orig
+
+# Composer
+/vendor/
+/composer.lock
+/composer.phar
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+/tests/output/
+
+# IDEs y editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Configuración local
+.env
+.env.local
+.env.*.local
+*.env
+
+# PostgreSQL (archivos comunes de dump o backups)
+*.sql
+*.pgsql
+*.dump
+*.backup
+
+# Cache o sesiones
+/cache/
+/sessions/
+
+# Logs
+/logs/
+/*.log
+
+# Archivos de build o temporales
+/build/
+/tmp/
+/node_modules/
+
+# Archivos del servidor web
+/public/.htaccess
+/public
