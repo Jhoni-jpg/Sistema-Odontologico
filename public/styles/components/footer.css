@@ -1,0 +1,14 @@
+/* Footer */
+.footer {
+    background: var(--sidebar-bg);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer p {
+    font-size: 0.875rem;
+    margin: 0;
+}

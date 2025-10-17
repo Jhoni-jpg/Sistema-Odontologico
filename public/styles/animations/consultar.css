@@ -1,0 +1,35 @@
+.transitionFadeIn_button {
+    display: flex;
+    opacity: 0;
+    animation: animationFade_button .3s ease-in-out .3s forwards;
+}
+
+.transitionFadeOut_button {
+    opacity: 1;
+    animation: animationFadeOut_button .3s ease-in-out .3s forwards;
+}
+
+@keyframes animationFade_button {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animationFadeOut_button {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}

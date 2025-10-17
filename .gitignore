@@ -55,7 +55,3 @@ Desktop.ini
 /build/
 /tmp/
 /node_modules/
-
-# Archivos del servidor web
-/public/.htaccess
-/public

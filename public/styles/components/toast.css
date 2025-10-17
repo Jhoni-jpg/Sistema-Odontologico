@@ -1,0 +1,45 @@
+/* Flash Messages */
+.flash-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+  max-width: 400px;
+}
+
+.alert {
+  border-radius: var(--radius-sm);
+  border: none;
+  box-shadow: var(--shadow-lg);
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #dcfdf7 0%, #a7f3d0 100%);
+  color: #065f46;
+  border-left: 4px solid var(--success-color);
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+  color: #991b1b;
+  border-left: 4px solid var(--error-color);
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fffbeb 0%, #fed7aa 100%);
+  color: #92400e;
+  border-left: 4px solid var(--warning-color);
+}
