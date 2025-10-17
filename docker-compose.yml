@@ -1,0 +1,44 @@
+services:
+  app:
+    build: .
+    container_name: sistemaOdontologico
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./apache.conf:/etc/apache2/conf-available/z-mvc.conf
+    depends_on:
+      - db
+    command: >
+      bash -c "a2enmod rewrite &&
+               a2enconf z-mvc &&
+               apache2-foreground"
+
+  db:
+    image: postgres:15
+    container_name: postgresBD
+    restart: always
+    environment:
+      POSTGRES_DB: citas
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: postgresadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+
+volumes:
+  database:

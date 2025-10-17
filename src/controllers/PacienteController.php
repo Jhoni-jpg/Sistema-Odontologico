@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../model/Paciente.php';
 
 
@@ -25,15 +24,6 @@ class PacienteController extends ControllerViews
 
     public function newPatient()
     {
-        header('Access-Control-Allow-Origin: http://localhost');
-        header('Access-Control-Allow-Credentials: true');
-        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-            header('Access-Control-Allow-Methods: POST, OPTIONS');
-            header('Access-Control-Allow-Headers: Content-Type');
-            http_response_code(200);
-            exit;
-        }
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $identificacion = trim(filter_input(INPUT_POST, 'identificacion', FILTER_SANITIZE_NUMBER_INT) ?? '');
             $nombres = $nombres  = trim(filter_input(INPUT_POST, 'nombres', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '');

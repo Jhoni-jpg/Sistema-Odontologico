@@ -11,15 +11,6 @@ class ConsultarController extends ControllerViews
 
     public function __construct()
     {
-        header('Access-Control-Allow-Origin: http://localhost');
-        header('Access-Control-Allow-Credentials: true');
-        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-            header('Access-Control-Allow-Methods: POST, OPTIONS');
-            header('Access-Control-Allow-Headers: Content-Type');
-            http_response_code(200);
-            exit;
-        }
-
         $this->modelMedico = new Medico();
         $this->modelCita = new Cita();
         $this->modelConsultorio = new Consultorio();

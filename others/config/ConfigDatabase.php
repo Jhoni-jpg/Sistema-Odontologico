@@ -18,7 +18,6 @@ class BDConnect
         $dotenv->load();
 
         $this->host = $_ENV['DB_HOST'];
-        $this->port = $_ENV['DB_PORT'];
         $this->dbname = $_ENV['DB_NAME'];
         $this->password = $_ENV['DB_PASSWORD'];
         $this->username = $_ENV['DB_USERNAME'];
@@ -27,7 +26,7 @@ class BDConnect
     function establecerConexion(): \PDO
     {
         $this->pdo = new \PDO(
-            "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}",
+            "pgsql:host={$this->host};dbname={$this->dbname}",
             $this->username,
             $this->password,
             [

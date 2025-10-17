@@ -36,7 +36,6 @@ $countRows = $modelGeneral->contFilas();
 
         <div class="main-content">
             <div class="content">
-                <!-- Welcome Header -->
                 <div class="welcome-header">
                     <h1><i class="fa-solid fa-hand-wave"></i> Bienvenido a OdontoSys</h1>
                     <p>Sistema de Gestión de Citas Odontológicas</p>
@@ -93,7 +92,6 @@ $countRows = $modelGeneral->contFilas();
                     </div>
                 </div>
 
-                <!-- Quick Actions -->
                 <div class="quick-actions">
                     <h2><i class="fa-solid fa-bolt"></i> Acciones Rápidas</h2>
                     <div class="actions-grid">
@@ -114,7 +112,6 @@ $countRows = $modelGeneral->contFilas();
                     </div>
                 </div>
 
-                <!-- Recent Activity -->
                 <div class="recent-activity">
                     <h2><i class="fa-solid fa-history"></i> Actividad Reciente</h2>
                     <div class="activity-list">
