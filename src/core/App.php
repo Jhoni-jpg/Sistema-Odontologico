@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . '/ControllerViews.php';
+
+$modelViews = new ControllerViews();
 $ruta = $_GET['url'] ?? 'home/index';
 $ruta = explode('/', filter_var($ruta, FILTER_SANITIZE_URL));
 
@@ -18,5 +21,5 @@ if (file_exists($controllerFile)) {
         echo "Metodo '$method' no encontrado";
     }
 } else {
-    echo "Controlador '$controller' no encontrado"; 
+    $modelViews->views('404');
 }
