@@ -9,11 +9,6 @@
 *.php~
 *.orig
 
-# Composer
-/vendor/
-/composer.lock
-/composer.phar
-
 # PHPUnit
 /phpunit.xml
 /phpunit.xml.dist
