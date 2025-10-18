@@ -32,8 +32,6 @@ ehthumbs.db
 Desktop.ini
 
 # PostgreSQL (archivos comunes de dump o backups)
-*.sql
-*.pgsql
 *.dump
 *.backup
 
