@@ -10,6 +10,8 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 COPY ./apache-config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
