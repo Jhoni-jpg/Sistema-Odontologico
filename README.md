@@ -94,7 +94,7 @@ Accede a la aplicación desde tu navegador en la URL y puerto configurados en `.
 
 IMPORTANTE: la carpeta `vendor/` está incluida en `.gitignore`. No subas esa carpeta al repositorio para evitar problemas con dependencias y tamaño del repositorio.
 
-Si la subiste por accidente, elimina la carpeta y crea un commit que la borre, luego añade `vendor/` a `.gitignore`. (Si necesitas, puedo darte los pasos exactos para limpiar la historia de git.)
+Si la subiste por accidente, elimina la carpeta y crea un commit que la borre, luego añade `vendor/` a `.gitignore`.
 
 ---
 
