@@ -1,4 +1,4 @@
- <?php
+<?php
     require_once __DIR__ . '/../../others/config/ConfigDatabase.php';
     require_once __DIR__ . '/../model/General.php';
 
