@@ -21,16 +21,7 @@ git clone https://github.com/Jhoni-jpg/Sistema-Odontologico.git
 cd Sistema-Odontologico
 ```
 
-2. Configurar .env
-
-Copia el archivo de ejemplo y ajusta las variables necesarias (base de datos, puertos, credenciales, etc.):
-
-```bash
-cp .env.example .env
-# Edita .env con tu editor favorito (vi, nano, code, etc.)
-```
-
-3. Levantar contenedores Docker
+2. Levantar contenedores Docker
 
 ```bash
 docker-compose up -d
@@ -38,7 +29,7 @@ docker-compose up -d
 
 Esto levantará los servicios definidos en docker-compose (por ejemplo: app, postgres, etc.).
 
-4. Instalar dependencias con Composer dentro del contenedor
+3. Instalar dependencias con Composer dentro del contenedor
 
 ```bash
 docker-compose exec app composer install
