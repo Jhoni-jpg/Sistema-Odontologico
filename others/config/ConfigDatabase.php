@@ -1,7 +1,4 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
-
-use Dotenv\Dotenv;
 
 class BDConnect
 {
@@ -14,13 +11,11 @@ class BDConnect
     private string $username;
     function __construct()
     {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
-        $dotenv->load();
 
-        $this->host = $_ENV['POSTGRES_HOST'];
-        $this->dbname = $_ENV['POSTGRE_DB'];
-        $this->password = $_ENV['POSTGRES_PASSWORD'];
-        $this->username = $_ENV['POSTGRES_USER'];
+        $this->host = getenv('DB_HOST');
+        $this->dbname = getenv('DB_NAME');
+        $this->password = getenv('DB_PASSWORD');
+        $this->username = getenv('DB_USER');
     }
 
     function establecerConexion(): \PDO

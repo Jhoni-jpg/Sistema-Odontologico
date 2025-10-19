@@ -2,6 +2,11 @@ services:
   app:
     build: .
     container_name: sistemaOdontologico
+    environment:
+      DB_HOST: db
+      DB_NAME: citas
+      DB_USER: postgres
+      DB_PASSWORD: admin
     ports:
       - "8080:80"
     volumes:
@@ -19,7 +24,6 @@ services:
     container_name: postgresBD
     restart: on-failure
     environment:
-      POSTGRES_HOST: db
       POSTGRES_DB: citas
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
