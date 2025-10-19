@@ -19,6 +19,7 @@ services:
     container_name: postgresBD
     restart: always
     environment:
+      POSTGRES_HOST: db
       POSTGRES_DB: citas
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin

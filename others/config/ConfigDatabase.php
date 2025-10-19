@@ -17,10 +17,10 @@ class BDConnect
         $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
         $dotenv->load();
 
-        $this->host = $_ENV['DB_HOST'];
-        $this->dbname = $_ENV['DB_NAME'];
-        $this->password = $_ENV['DB_PASSWORD'];
-        $this->username = $_ENV['DB_USERNAME'];
+        $this->host = $_ENV['POSTGRES_HOST'];
+        $this->dbname = $_ENV['POSTGRE_DB'];
+        $this->password = $_ENV['POSTGRES_PASSWORD'];
+        $this->username = $_ENV['POSTGRES_USER'];
     }
 
     function establecerConexion(): \PDO
