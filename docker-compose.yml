@@ -17,14 +17,14 @@ services:
   db:
     image: postgres:15
     container_name: postgresBD
-    restart: always
+    restart: on-failure
     environment:
       POSTGRES_HOST: db
       POSTGRES_DB: citas
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
     ports:
-      - "5432:5432"
+      - "5435:5432"
     volumes:
       - database:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
